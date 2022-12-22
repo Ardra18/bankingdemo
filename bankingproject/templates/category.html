@@ -1,0 +1,15 @@
+{% load static %}
+{% block metadescription %}
+   {% if category %}
+         {{category.description | truncatewords:155}}
+   {% else %} welcome
+   {% endif %}
+{% endblock %}
+{% block title %}
+{% if category %}
+        {{category.name}}
+   {% else %}
+         See Our branches
+   {% endif %}
+{% endblock %}
+
